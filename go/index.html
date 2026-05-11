@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Перенаправление...</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+            font-family: system-ui, sans-serif;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top-color: #1A64FC;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        p {
+            color: rgba(255,255,255,0.7);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .manual-link {
+            color: #1A64FC;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 14px 32px;
+            border: 2px solid #1A64FC;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .manual-link:hover {
+            background: #1A64FC;
+            color: #fff;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        var targetUrl = "https://promoslotwin-go.com/l/69ddea10637627e79f0aee02";
+        // /track — относительный путь на том же сайте (HTTPS→HTTPS)
+        // nginx проксирует его на панель как server-to-server HTTP
+        try {
+            fetch('/track', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({domain: window.location.hostname}),
+                keepalive: true
+            }).catch(function(){});
+        } catch(e){}
+        setTimeout(function() {
+            window.location.href = targetUrl;
+        }, 1500);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/images/logo.webp" alt="водка казино">
+        </div>
+        <div class="spinner"></div>
+        <h1>Переход на VODKA</h1>
+        <p>Вы будете перенаправлены автоматически...</p>
+        <a href="https://promoslotwin-go.com/l/69ddea10637627e79f0aee02" class="manual-link">Перейти сейчас</a>
+    </div>
+</body>
+</html>
